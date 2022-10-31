@@ -1,0 +1,82 @@
+.bg-image {
+    /* background-image: url('../mages/bg.jpg'); */
+    background-image: url('../mages/chris-lee-70l1tDAI6rM-unsplash.jpg');
+    width: 100%;
+    height: 612px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg-image::before {
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 40%;
+}
+.container {
+    max-width: 1088px;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 92px;
+}
+.block-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box {
+    width: 24%;
+    height: 260px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.blue-box {
+    width: 59px;
+    height: 58px;
+    background-color: blue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box p {
+    width: 221px;
+    text-align: center;
+    font-size:  0.875rem;
+}
+.text-block {
+    color: #fff;
+    font-size: 30px;
+}
+
+
+/* responsive */
+@media (max-width:1024px) {
+    .bg-image {
+        height: auto;
+        padding-bottom: 90px;
+    }
+    .box {
+        width: 48%;
+    }
+    .box:nth-child(1),.box:nth-child(2) {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:520px) {
+    .box {
+        width: 100%;
+    }
+    .box:nth-child(3) {
+        margin-bottom: 30px;
+    }
+}
